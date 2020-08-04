@@ -3,10 +3,10 @@
 
 cd plan-02
 terraform workspace select development
-terraform destroy
+terraform destroy -auto-approve
 terraform workspace select staging
-terraform destroy
+terraform destroy -auto-approve
 terraform workspace select production
-terraform destroy
+terraform destroy -auto-approve
 cd ../plan-01
-terraform destroy
+terraform destroy -auto-approve
