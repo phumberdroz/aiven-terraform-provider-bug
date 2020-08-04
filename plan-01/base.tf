@@ -8,8 +8,8 @@ provider "aiven" {
   api_token = var.aiven_api_token
 }
 resource "random_string" "test" {
-  length = 4
-  upper = false
+  length  = 4
+  upper   = false
   special = false
 }
 

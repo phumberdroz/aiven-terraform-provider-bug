@@ -4,7 +4,7 @@ variable "aiven_api_token" {
 }
 
 variable "aiven_project_name" {
-  type        = string
+  type = string
 }
 
 provider "aiven" {
@@ -32,9 +32,9 @@ data "aiven_account_team" "members" {
 }
 
 resource "aiven_project" "stage" {
-//  copy_from_project = data.aiven_project.spectrm.project
-  project           = "spectrm-${terraform.workspace}-${random_string.aiven_suffix.result}"
-  account_id        = data.aiven_account.spectrm.account_id
+  //  copy_from_project = data.aiven_project.spectrm.project
+  project    = "spectrm-${terraform.workspace}-${random_string.aiven_suffix.result}"
+  account_id = data.aiven_account.spectrm.account_id
   lifecycle {
     ignore_changes = [
       billing_emails,
